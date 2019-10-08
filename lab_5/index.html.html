@@ -11,7 +11,7 @@
     <div class="wrapper">
       <div class="header">Test JSON page</div>
       <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
-      <button class="button" onclick="console.log('You haven\'t written a function yet!');">Click me to replace list entries</button>
+      <button class="button" onclick="console.log(display_array());">Click me to replace list entries</button>
       <div class="content">
         <ul class="instructions">
           <li>Delete and re-clone the class repository</li>
@@ -28,6 +28,7 @@
           </li>
         </ul>
       </div>
+      <div id="List"></div>
       <div class="footer"></div>
     </div>
   </div>
@@ -278,7 +279,30 @@
       { "name": "Zambia", "code": "ZM" },
       { "name": "Zimbabwe", "code": "ZW" }
     ]
-    console.log("List of countries in the world", countries);
+
+    sessionStorage.setItem("country_list",JSON.stringify(countries));
+
+    function countryloop(){
+      const str = sessionStorage.getItem("country_list");
+      const nations  = JSON.parse(str);
+      var nats =[];
+
+      for (let i=0; i< 50;i++){
+        nats.push(nations[Math.floor(Math.random() * countries.length)]);
+      }
+      console.log(nats);
+      return nats;
+    }
+
+    function display_array(){
+      var e = "<hr/>";   
+      var arr = countryloop();
+      for (var y=0; y<arr.length; y++){
+          e +=  arr[y].name+" "+arr[y].code + "<br/>";
+      }
+      document.getElementById("List").innerHTML = e;
+    }
+ 
   </script>
 </body>
 
