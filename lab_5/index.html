@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-      <div id="List"></div>
+      <div id="List" style="border-style :solid;background-color: aqua"></div>
       <div class="footer"></div>
     </div>
   </div>
@@ -285,21 +285,25 @@
     function countryloop(){
       const str = sessionStorage.getItem("country_list");
       const nations  = JSON.parse(str);
+      var nats_copy = nations;
       var nats =[];
+      
 
       for (let i=0; i< 50;i++){
-        nats.push(nations[Math.floor(Math.random() * countries.length)]);
+        nats.push(nats_copy[Math.floor(Math.random() * (countries.length-i))]);
+        nats_copy = nats_copy.filter((item) => !nats.includes(item));
       }
       console.log(nats);
       return nats;
     }
 
     function display_array(){
-      var e = "<hr/>";   
+      var e = '<ol type="1">';   
       var arr = countryloop();
       for (var y=0; y<arr.length; y++){
-          e +=  arr[y].name+" "+arr[y].code + "<br/>";
+          e +=   "<li> " +arr[y].name + "</li>";
       }
+      e += '</ol>'
       document.getElementById("List").innerHTML = e;
     }
  
