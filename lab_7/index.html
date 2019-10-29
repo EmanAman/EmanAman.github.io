@@ -34,6 +34,8 @@
        .then(data => {
         document.querySelector(".header").innerText ='UMD Bus Route'+ data.find(function(x){return x == '104 College Park Metro'})
        })
+       .then(data =>
+       console.log(data))
     }
   </script>
 </body>
