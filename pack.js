@@ -1,7 +1,7 @@
 function weighted_random() {
     var options = [
         {name:"Pele", weight: 548},
-        {name:"Zinedine", weight: 1019},
+        {name:"Zidane", weight: 1019},
         {name:"Ronaldinho", weight: 678},
         {name:"Yashin", weight: 7008},
         {name:"Garrincha", weight: 1610},
@@ -91,7 +91,7 @@ function weighted_random() {
   var sourceOfPicture = "icons/"+(options[i].name).toUpperCase()+".png";
   var img = document.getElementById('bigpic')
   img.src = sourceOfPicture;
-  img.style.display = "block";
-
+  img.style.display = "inline-block";
+  
 }
 
