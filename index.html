@@ -1,63 +1,84 @@
 <!DOCTYPE html>
+<html>
+  <title>91+ Prime Icon Pack</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    body,
+    h1 {
+      font-family: "Montserrat", sans-serif;
+    }
 
-<html lang="en">
+    img {
+      max-height: 850px;
+      max-width: 500px;
+      margin-left: 32%;
+    }
 
+    .imgc {
+      text-align: center;
+      width: 100%;
+      display:inline-block;
+      background-color: black;
+    }
+  </style>
+  <script src="pack.js"></script>
 
-<!--Meta data and head-->
-<div id='metadata'>
-  <head>
-    <link rel="stylesheet" href="indexstyle.css">
-    <meta charset="utf-8">
-    <title>The only white Rice available in Virginia</title>
-    <meta name='author' content="Emmanuel Mekonnen">
-    <meta name='description' content="This is my personal website">
-  </head>
-</div>
-
-
-<!--Top level header-->
-<div class="header">
-    <h1 class= 'top-level header'>Howdy Neighbour, I'm Sam.</h1>
-</div>
-
-
-<!-- Introduction div-->
-<body>
-  <nav>
-    <ul class='navlinks'>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="accom.html">List of accomplishments</a></li>
-      <li><a href="hobbies.html">Hobbies</a></li>
-      <li><a href="work.html">Work</a></li>
-    </ul>
-  </nav>
-  <div class = 'About-me'>
-    <div class='Introduction'>
-      <h3 class='Hello'>Hi, my name is Sam, short for Samantha and welcome to my website</h1>
-      <img class='image1' src="sam.jpg"  alt="Hello image">
-      <hr>
-      <div class='intro-paragraph-div'>
-        <p class='intro-paragraph'>
-          Hello my name is Sam and I pretend graduated from the University of Virginia. I am an aspiring Instagram model, rapper and acrobat.
-          In the future, I would like to work in one of  these fields, and if that does not work I plan on starting my very own OnlyFans.
-          <br>
-          I created this website to get my name out there and to practice my web-development
-          skills. I will try to update this website with any projects I am working on as much as I can.
-          <br>
-          <br>
-          <p id= 'signature'>
-            Sam Rice
-            <br>
-            University of Virginia, School Of Literally Not Possible To Fail
-            <br>
-            samrice@virgin.edu
-            <hr>
-          </p>
-        </p>
+  <body>
+    <nav
+      class="w3-sidebar w3-black w3-animate-top w3-xxlarge"
+      style="display: none; padding-top: 150px"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright"
+        style="padding: 6px 24px"
+      >
+        <i class="fa fa-remove"></i>
+      </a>
+      <div class="w3-bar-block w3-center">
+        <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          >About</a
+        >
+        <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          >Photos</a
+        >
+        <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          >Shop</a
+        >
+        <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black"
+          >Contact</a
+        >
       </div>
+    </nav>
+
+    <!-- !PAGE CONTENT! -->
+
+    <!-- Header -->
+    <div class="w3-opacity">
+      <div class="w3-clear" style="background-color: black"></div>
+      <header class="w3-center w3-margin-bottom">
+        <h1><b>91+ Prime Icon Pack</b></h1>
+        <p><b>Test your luck with this pack simulator</b></p>
+        <p class="w3-padding-16">
+          <button class="button" onclick="weighted_random()">Open Pack</button>
+        </p>
+      </header>
     </div>
-  </div>
-     </div>
-  </div>
-</body>
+
+    <div class="imgc">
+      <img style="display: none" id="bigpic" />
+    </div>
+  </body>
 </html>
