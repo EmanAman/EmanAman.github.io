@@ -7,10 +7,8 @@ from PIL import Image
 
 import requests
 from PIL import ExifTags
-from fastai.learner import load_learner
 from fastai.vision.core import PILImage
 import streamlit as st
-import numpy as np
 
 
 st.set_page_config(
