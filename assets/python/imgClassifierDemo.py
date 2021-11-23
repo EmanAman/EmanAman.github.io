@@ -96,7 +96,7 @@ def fix_rotation(file_data):
     return image
 
 
-learn = keras.models.load_model("animal_model_v1")
+learn = tf.keras.models.load_model("animal_model_v1")
 
 if file_data is not None:
     with st.spinner('Classifying...'):
