@@ -1,19 +1,17 @@
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import layers
+
 import numpy as np
-from keras.preprocessing import image
-from skimage.transform import resize
+
 from PIL import Image
-import os
+
 import requests
 from PIL import ExifTags
 from fastai.learner import load_learner
 from fastai.vision.core import PILImage
 import streamlit as st
 import numpy as np
-import tensorflow as tf
-from tensorflow import keras
+
 
 st.set_page_config(
     page_title="Animal Classifier Demo by Emmanuel Mekonnen",
