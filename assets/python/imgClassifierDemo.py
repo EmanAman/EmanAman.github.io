@@ -7,7 +7,6 @@ from PIL import Image
 
 import requests
 from PIL import ExifTags
-from fastai.vision.core import PILImage
 import streamlit as st
 
 
