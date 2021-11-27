@@ -108,9 +108,9 @@ if file_data is not None:
         y_classes = np.argmax(pred, axis=1)
         print("PREDICCCCTION", y_classes)
         # prepare output
-        #out_text = '<table><tr> <th>Breed</th> <th>Confidence</th> <th>Example</th> </tr>'
-        #out_text += learn.predict(img)
-        #out_text += '</table><br><br>'
+        out_text = '<table><tr> <th>Breed</th> <th>Confidence</th> <th>Example</th> </tr>'
+        out_text += learn.predict(img)
+        out_text += '</table><br><br>'
 
-        # st.write('## What the model thinks')
-        #st.markdown(out_text, unsafe_allow_html=True)
+        st.write('## What the model thinks')
+        st.markdown(out_text, unsafe_allow_html=True)
