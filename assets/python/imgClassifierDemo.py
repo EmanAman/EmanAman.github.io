@@ -85,7 +85,7 @@ def load_model():
     return tf.keras.models.load_model("animal_model_v1")
 
 
-learn = load_model
+learn = load_model()
 
 if file_data is not None:
     with st.spinner('Classifying...'):
