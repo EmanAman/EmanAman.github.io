@@ -82,7 +82,7 @@ def fix_rotation(file_data):
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-    return tf.keras.models.load_model("animal_model_v1")
+    return tf.keras.models.load_model("animal_CNN_v1.h5")
 
 
 learn = load_model()
