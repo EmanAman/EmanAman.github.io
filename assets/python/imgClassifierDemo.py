@@ -8,6 +8,7 @@ from PIL import Image
 import requests
 from PIL import ExifTags
 import streamlit as st
+import os
 
 
 st.set_page_config(
@@ -19,6 +20,8 @@ st.write("# Animal Classifier")
 st.subheader('By Emmanuel Mekonnen')
 
 st.write("This project classifies different animal photos using a CNN.")
+
+st.write(os.getcwd())
 with st.expander("More info about the model"):
     st.markdown("""
         <p>This project used a Convolution Neural Network pre-trained on ImageNet, using
