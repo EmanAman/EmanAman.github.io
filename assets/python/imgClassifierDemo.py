@@ -96,20 +96,25 @@ if file_data is not None:
         img = Image.open(file_data)
         st.write('## Your Image')
         st.image(img, width=200)
-        print("here3333", type(img))
         img2 = img.resize((150, 150), Image.ANTIALIAS)
         img_array = np.asarray(img2)/255.
         img_batch = np.expand_dims(img_array, axis=0)
 
         # classify
         st.write(print((img_batch)))
-        print(learn.predict(img_batch))
+
         pred = learn.predict(img_batch)
         y_classes = np.argmax(pred, axis=1)
         print("PREDICCCCTION", y_classes)
+        print(type(y_classes))
+
+        ts = y_classes.tostring()
+
         # prepare output
         out_text = '<table><tr> <th>Breed</th> <th>Confidence</th> <th>Example</th> </tr>'
-        out_text += learn.predict(img)
+        print(type(str(ts)))
+        print(type(out_text))
+        out_text = out_text+str(ts)
         out_text += '</table><br><br>'
 
         st.write('## What the model thinks')
